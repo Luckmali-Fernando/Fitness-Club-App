@@ -28,43 +28,32 @@ class BannerCard extends StatelessWidget {
               ),
             ),
 
-            // Dark gradient at bottom for text visibility
-            Positioned.fill(
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [
-                      Colors.black.withOpacity(0.7),
-                      Colors.transparent,
-                    ],
-                  ),
-                ),
-              ),
+            // Dark overlay 
+            Container(
+              color: Colors.black.withOpacity(0.40),
             ),
 
-            // Text
-            Positioned(
-              left: 16,
-              bottom: 24,
+            //Center text 
+            Center(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     title,
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
                   Text(
                     subtitle,
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                       color: Colors.white70,
-                      fontSize: 14,
+                      fontSize: 15,
                     ),
                   ),
                 ],
