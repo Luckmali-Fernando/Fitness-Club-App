@@ -43,6 +43,7 @@ class DashboardView extends StatelessWidget {
                 children: [
                   Expanded(
                     child: BigStartCard(
+                      buttonColor: Colors.red,
                       imagePath: 'assets/main_dashboard/image_1.png',
                       onTap: () {
                       Navigator.pushReplacement(
@@ -58,6 +59,7 @@ class DashboardView extends StatelessWidget {
                   const SizedBox(width: 16),
                   Expanded(
                     child: BigStartCard(
+                      buttonColor: Colors.pinkAccent,
                       imagePath: 'assets/main_dashboard/image_2.png',
                       onTap: () {
                       Navigator.pushReplacement(

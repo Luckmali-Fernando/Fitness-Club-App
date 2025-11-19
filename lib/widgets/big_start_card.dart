@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 class BigStartCard extends StatelessWidget {
   final String imagePath;
   final VoidCallback onTap;
+  final Color buttonColor;  
 
   const BigStartCard({
     super.key,
     required this.imagePath,
     required this.onTap,
+    required this.buttonColor,   
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: onTap,   // 👈 THIS must be here
+      onTap: onTap,   
       child: SizedBox(
         height: 160,
         child: ClipRRect(
@@ -38,7 +40,7 @@ class BigStartCard extends StatelessWidget {
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: buttonColor,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Text(
