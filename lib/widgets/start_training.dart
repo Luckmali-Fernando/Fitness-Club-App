@@ -64,10 +64,12 @@ class StartTrainingWidget extends StatelessWidget {
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
-                    Icons.play_arrow,
-                    color: Colors.red,
-                    size: 26,
+                  child: Center(
+                      child:Icon(
+                        Icons.play_arrow_rounded,
+                        color: Colors.red,
+                        size: AppSizes.playInner*0.70,
+                      ),
                   ),
                 ),
               ),
