@@ -1,6 +1,6 @@
-import 'package:fitness_club_app/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
-import '../widgets/start_training.dart'; 
+import '../widgets/start_training.dart';
+import '../views/dashboard_view.dart'; // adjust path if needed
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -8,27 +8,26 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
-          //Background image
+          // Background image
           Positioned.fill(
             child: Image.asset(
-              'assets/splash_screen/splash_image.png', 
+              'assets/splash_screen/splash_image.png',
               fit: BoxFit.cover,
             ),
           ),
 
-          
-          // Content at the bottom 
+          //content
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Spacer(), 
+                  const Spacer(),
 
-                  // Title text
                   const Text(
                     'Join the Fitness\nClub',
                     style: TextStyle(
@@ -40,19 +39,18 @@ class SplashView extends StatelessWidget {
 
                   const SizedBox(height: 24),
 
-                  // Start Training button
-                 StartTrainingWidget(
+                  StartTrainingWidget(
                     onTap: () {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const DashboardView(),
+                          builder: (_) => const DashboardView(),
                         ),
                       );
                     },
                   ),
 
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
