@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/start_training.dart';
-import '../views/dashboard_view.dart'; // adjust path if needed
+import '../views/dashboard_view.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
